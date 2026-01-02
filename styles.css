@@ -9,7 +9,6 @@ body{
   color: #0f172a;
 }
 
-/* Palette chosen specifically to avoid PoM dark/blue/orange vibe */
 :root{
   --panel: #ffffff;
   --ink: #0f172a;
