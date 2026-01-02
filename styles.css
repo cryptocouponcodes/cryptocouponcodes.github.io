@@ -1,6 +1,7 @@
 /* Force light rendering */
 html { color-scheme: light; }
-body {
+
+body{
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.55;
@@ -72,9 +73,7 @@ body {
 .sitename{ font-weight: 900; font-size: 16px; }
 .tagline{ color: var(--muted); font-size: 13px; margin-top: 2px; }
 
-.reviewed{
-  text-align: right;
-}
+.reviewed{ text-align: right; }
 .reviewed .label{
   color: var(--muted);
   font-size: 12px;
@@ -106,13 +105,14 @@ body {
   margin: 10px 0 12px;
 }
 
+/* 1) Top pills -> square tags */
 .pill{
   font-size: 12px;
   color: var(--muted);
   background: var(--soft);
   border: 1px solid var(--line);
   padding: 6px 10px;
-  border-radius: 999px;
+  border-radius: 6px;   /* was 999px */
 }
 
 .nav{
@@ -121,13 +121,14 @@ body {
   gap: 10px;
 }
 
+/* 2) Nav buttons -> square tabs */
 .nav a{
   color: var(--accent);
   text-decoration: none;
   font-weight: 800;
   font-size: 13px;
   padding: 6px 10px;
-  border-radius: 10px;
+  border-radius: 6px;   /* was 10px */
   border: 1px solid var(--line);
   background: var(--panel);
 }
@@ -138,13 +139,9 @@ body {
 }
 
 /* Sections */
-.section{
-  padding: 18px 0;
-}
+.section{ padding: 18px 0; }
 
-.sectionhead{
-  margin: 0 0 10px;
-}
+.sectionhead{ margin: 0 0 10px; }
 
 .sectionhead h2{
   margin: 0;
@@ -217,37 +214,32 @@ body {
 
 .store{ font-weight: 900; }
 
+/* 3) Ends soon badge -> square label */
 .badge{
-  display:inline-flex;
-  align-items:center;
-  margin-left: 10px;
+  display:inline-block;
+  margin-left: 8px;
   padding: 2px 8px;
   font-size: 11px;
-  border-radius: 6px;              /* NOT pill */
-  border: 1px solid #bfe2cf;
-  background: #eefaf3;             /* light green */
-  color: #1f6b3d;                  /* green text */
-  font-weight: 900;
-  letter-spacing: .2px;
+  border-radius: 4px;   /* was 999px */
+  border: 1px solid #cfe3df;
+  background: #eef7f5;
+  color: var(--accent2);
+  font-weight: 800;
 }
 
 /* Highlight a row subtly (not loud) */
-.featured{
-  background: #f7fbfa;
-}
+.featured{ background: #f7fbfa; }
 
-.badge{
-  display:inline-flex;
-  align-items:center;
-  margin-left: 10px;
-  padding: 2px 8px;
-  font-size: 11px;
-  border-radius: 6px;              /* NOT pill */
-  border: 1px solid #bfe2cf;
-  background: #eefaf3;             /* light green */
-  color: #1f6b3d;                  /* green text */
-  font-weight: 900;
-  letter-spacing: .2px;
+/* 4) Code pill -> square code tag */
+.code{
+  display:inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;   /* was 999px */
+  background: var(--soft);
+  border: 1px solid var(--line);
+  white-space: nowrap;
 }
 
 .muted{ color: var(--muted); }
@@ -310,13 +302,7 @@ li{ margin: 6px 0; }
 
 /* Responsive: collapse columns on small screens */
 @media (max-width: 860px){
-  .row{
-    grid-template-columns: 1fr;
-  }
-  .headerrow{
-    display:none;
-  }
-  .row > div{
-    padding: 2px 0;
-  }
+  .row{ grid-template-columns: 1fr; }
+  .headerrow{ display:none; }
+  .row > div{ padding: 2px 0; }
 }
