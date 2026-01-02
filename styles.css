@@ -218,15 +218,17 @@ body {
 .store{ font-weight: 900; }
 
 .badge{
-  display:inline-block;
-  margin-left: 8px;
+  display:inline-flex;
+  align-items:center;
+  margin-left: 10px;
   padding: 2px 8px;
   font-size: 11px;
-  border-radius: 999px;
-  border: 1px solid #cfe3df;
-  background: #eef7f5;
-  color: var(--accent2);
-  font-weight: 800;
+  border-radius: 6px;              /* NOT pill */
+  border: 1px solid #bfe2cf;
+  background: #eefaf3;             /* light green */
+  color: #1f6b3d;                  /* green text */
+  font-weight: 900;
+  letter-spacing: .2px;
 }
 
 /* Highlight a row subtly (not loud) */
@@ -234,16 +236,18 @@ body {
   background: #f7fbfa;
 }
 
-/* Code pill */
-.code{
-  display:inline-block;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: var(--soft);
-  border: 1px solid var(--line);
-  white-space: nowrap;
+.badge{
+  display:inline-flex;
+  align-items:center;
+  margin-left: 10px;
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 6px;              /* NOT pill */
+  border: 1px solid #bfe2cf;
+  background: #eefaf3;             /* light green */
+  color: #1f6b3d;                  /* green text */
+  font-weight: 900;
+  letter-spacing: .2px;
 }
 
 .muted{ color: var(--muted); }
